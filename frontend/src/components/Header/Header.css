@@ -3,11 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0px;
+  height: 100px;
 }
 
 .navbar .logo {
   width: 200px;
-  height: 50px;
   object-fit: cover;
 }
 

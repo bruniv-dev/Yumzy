@@ -12,7 +12,7 @@ const Hero = () => {
         </div>
         <img
           className="hero-bg-img"
-          src={`${process.env.PUBLIC_URL}/hero_img.png`}
+          src={`${process.env.PUBLIC_URL}/Banner2.jpg`}
           alt=""
         />
       </div>
