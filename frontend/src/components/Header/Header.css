@@ -46,12 +46,16 @@
   border-bottom: 2px solid var(--primary-color);
 }
 
-.navbar li {
-  cursor: pointer;
-}
-
 .navbar-bag-icon {
   position: relative;
+}
+
+.navbar-menu-item {
+  transition: 0.2s ease-in-out;
+}
+
+.navbar-menu-item:hover {
+  color: var(--primary-color);
 }
 
 .navbar-bag-icon .dot {
