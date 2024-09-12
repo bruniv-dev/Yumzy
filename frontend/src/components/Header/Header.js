@@ -21,6 +21,12 @@ const Header = () => {
           menu
         </li>
         <li
+          onClick={() => setMenu("app")}
+          className={menu === "app" ? "active" : ""}
+        >
+          app
+        </li>
+        <li
           onClick={() => setMenu("contact-us")}
           className={menu === "contact-us" ? "active" : ""}
         >
