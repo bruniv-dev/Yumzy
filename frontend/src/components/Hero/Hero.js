@@ -4,11 +4,17 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <>
-      <div className="hero">
+      <div className="hero" id="hero">
         <div className="hero-contents">
           <h2>Order Your favorite food here</h2>
-          <p>Choose from a diverse menu feauturing all kinds of dishes</p>
-          <button>view menu</button>
+          <p>
+            Craving something tasty? Yumzy has you covered. Browse our menu
+            online and get your favorite dishes delivered straight to you.
+            Quick, easy, and delicious—order now!
+          </p>
+          <a href="#explore-menu">
+            <button>view menu</button>
+          </a>
         </div>
         <img
           className="hero-bg-img"

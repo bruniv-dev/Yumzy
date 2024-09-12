@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
 import "./Header.css";
 import { assets } from "../../assets/assets";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
 
 const Header = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount } = useContext(StoreContext);
+  const navigate = useNavigate();
   return (
     <div className="navbar">
       <Link to="/">
@@ -22,26 +23,35 @@ const Header = ({ setShowLogin }) => {
         </Link>
         <a
           href="#explore-menu"
-          onClick={() => setMenu("menu")}
+          onClick={() => {
+            setMenu("menu");
+            navigate("/#explore-menu");
+          }}
           className={`navbar-menu-item ${menu === "menu" ? "active" : ""}`}
         >
           menu
         </a>
         <a
           href="#app-download"
-          onClick={() => setMenu("app")}
+          onClick={() => {
+            setMenu("app");
+            navigate("/#app-download");
+          }}
           className={`navbar-menu-item ${menu === "app" ? "active" : ""}`}
         >
           app
         </a>
         <a
           href="#footer"
-          onClick={() => setMenu("contact-us")}
+          onClick={() => {
+            setMenu("contact-us");
+            navigate("/#footer");
+          }}
           className={`navbar-menu-item ${
             menu === "contact-us" ? "active" : ""
           }`}
         >
-          contact us
+          contact
         </a>
       </ul>
       <div className="navbar-right">

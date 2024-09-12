@@ -1,14 +1,16 @@
 import React from "react";
 import "./Footer.css";
 import { assets } from "../../assets/assets";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
   return (
     <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-          <img className="footer-logo" src={assets.logo} alt="" />
+          <img className="footer-logo" src={assets.logo_dark} alt="" />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
             nam voluptatem reprehenderit, temporibus autem dolorum odio eum a
@@ -22,7 +24,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-content-center">
-          <h2>ABOUT US</h2>
+          <h2>COMPANY</h2>
           <ul>
             <li>Home</li>
             <li>Menu</li>

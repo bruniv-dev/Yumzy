@@ -42,6 +42,7 @@ import food_32 from "./food_32.png";
 
 import basket_icon from "./basket_icon.png";
 import logo from "./logo.png";
+import logo_dark from "./logo-dark.png";
 import hero_img from "./hero_img.png";
 import search_icon from "./search_icon.png";
 import add_icon_white from "./add_icon_white.png";
@@ -62,6 +63,7 @@ import parcel_icon from "./parcel_icon.png";
 
 export const assets = {
   logo,
+  logo_dark,
   basket_icon,
   hero_img,
   search_icon,

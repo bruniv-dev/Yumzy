@@ -32,13 +32,13 @@
 .hero-contents h2 {
   font-weight: 500;
   color: white;
-  font-size: max(4.5vw, 22px);
+  font-size: max(3.5vw, 22px);
   text-transform: capitalize;
 }
 
 .hero-contents p {
-  color: var(--secondary-color);
-  font-size: 1vw;
+  font-size: 1.25vw;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .hero-contents button {
@@ -47,9 +47,15 @@
   font-weight: 500;
   padding: 1vw 2.3vw;
   background-color: white;
-  font-size: max(1vw, 13px);
+  font-size: max(1vw, 16px);
   border-radius: 50px;
   text-transform: capitalize;
+  transition: transform 0.3s ease-in;
+  margin-top: 10px;
+}
+
+.hero-contents button:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 1050px) {
