@@ -2,7 +2,7 @@
 // parts of a React application without passing props manually at every level.
 
 // importing the createContext function from React to create a Context object.
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 import { food_list } from "../assets/assets";
 
 // a new Context object named StoreContext is created.
@@ -11,6 +11,7 @@ import { food_list } from "../assets/assets";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
+  const [cartItems, setCartItems] = useState({});
   // This is a React component called StoreContextProvider.
   //It wraps its children components with a StoreContext.Provider.
   //The value prop of the provider is set to contextValue,
@@ -20,8 +21,28 @@ const StoreContextProvider = (props) => {
 
   //foodlist array can be accessed anywhere
 
+  const addToCart = (itemId) => {
+    if (!cartItems[itemId]) {
+      setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
+    } else {
+      setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    }
+  };
+
+  const removeFromCart = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  };
+
+  useEffect(() => {
+    console.log(cartItems);
+  }, [cartItems]);
+
   const contextValue = {
     food_list,
+    cartItems,
+    setCartItems,
+    addToCart,
+    removeFromCart,
   };
 
   return (

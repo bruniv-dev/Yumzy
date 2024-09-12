@@ -1,7 +1,3 @@
-import basket_icon from "./basket_icon.png";
-import logo from "./logo.png";
-import hero_img from "./hero_img.png";
-import search_icon from "./search_icon.png";
 import menu_1 from "./menu_1.png";
 import menu_2 from "./menu_2.png";
 import menu_3 from "./menu_3.png";
@@ -44,6 +40,10 @@ import food_30 from "./food_30.png";
 import food_31 from "./food_31.png";
 import food_32 from "./food_32.png";
 
+import basket_icon from "./basket_icon.png";
+import logo from "./logo.png";
+import hero_img from "./hero_img.png";
+import search_icon from "./search_icon.png";
 import add_icon_white from "./add_icon_white.png";
 import add_icon_green from "./add_icon_green.png";
 import remove_icon_red from "./remove_icon_red.png";
