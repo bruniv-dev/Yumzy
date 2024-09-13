@@ -10,7 +10,10 @@ const FoodItem = ({ id, name, price, description, image }) => {
   return (
     <div className="food-item">
       <div className="food-item-container-img">
-        <img className="food-item-image" src={image} alt="" />
+        <div className="image-div">
+          <img className="food-item-image" src={image} alt="" />
+        </div>
+
         {!cartItems[id] ? (
           <img
             className="add"
@@ -37,7 +40,8 @@ const FoodItem = ({ id, name, price, description, image }) => {
       <div className="food-item-info">
         <div className="food-item-name-rating">
           <p>{name}</p>
-          <img src={assets.rating_starts} alt="" />
+          {/* <img src={assets.rating_starts} alt="" /> */}
+          <img src={assets.rating_stars_yellow} alt="" />
         </div>
         <p className="food-item-description">{description}</p>
         <p className="food-item-price">&#8377; {price}</p>

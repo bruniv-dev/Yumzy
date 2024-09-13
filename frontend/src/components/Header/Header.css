@@ -23,7 +23,7 @@
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .navbar button {
@@ -49,6 +49,13 @@
 
 .navbar-bag-icon {
   position: relative;
+  font-size: 25px;
+  height: 25px;
+  justify-content: center;
+}
+
+.navbar-search-icon {
+  font-size: 22px;
 }
 
 .navbar-menu-item {

@@ -7,7 +7,7 @@
   font-family: "Outfit", sans-serif;
   --primary-color: #f5c233;
   /* --secondary-color: #49557e; */
-  --secondary-color: #4d4d4d;
+  --secondary-color: #444;
   --dark-yellow: #eea012;
   scroll-behavior: smooth;
 }

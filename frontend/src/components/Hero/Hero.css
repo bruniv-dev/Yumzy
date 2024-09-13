@@ -67,6 +67,8 @@
 @media (max-width: 750px) {
   .hero-contents {
     max-width: 65%;
+    top: 10%;
+    gap: 1vw;
   }
 
   .hero-contents p {

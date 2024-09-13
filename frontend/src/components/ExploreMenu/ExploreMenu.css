@@ -4,9 +4,9 @@
   gap: 20px;
 }
 
-.explore-menu h1 {
+.explore-menu h2 {
   color: var(--secondary-color);
-  font-weight: 500;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
@@ -23,6 +23,7 @@
   text-align: center;
   margin: 20px 0px;
   overflow-x: scroll;
+  padding: 5px;
 }
 
 .explore-menu-list::-webkit-scrollbar {
@@ -34,7 +35,14 @@
   min-width: 80px;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.2s ease-in;
+}
+
+.explore-menu-list-item img:hover {
+  transform: scale(1.03);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 50px;
 }
 
 .explore-menu-list-item p {

@@ -3,6 +3,8 @@ import "./Header.css";
 import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
+import { HiOutlineShoppingCart } from "react-icons/hi2";
+import { HiOutlineSearch } from "react-icons/hi";
 
 const Header = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
@@ -55,10 +57,12 @@ const Header = ({ setShowLogin }) => {
         </a>
       </ul>
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
+        {/* <img src={assets.search_icon} alt="" /> */}
+        {/* <HiOutlineSearch className="navbar-search-icon" /> */}
         <div className="navbar-bag-icon">
           <Link to="/cart">
-            <img src={assets.basket_icon} alt="" />
+            {/* <img src={assets.basket_icon} alt="" /> */}
+            <HiOutlineShoppingCart />
           </Link>
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>

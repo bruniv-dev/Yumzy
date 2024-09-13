@@ -45,6 +45,7 @@ import logo from "./logo.png";
 import logo_dark from "./logo-dark.png";
 import hero_img from "./hero_img.png";
 import search_icon from "./search_icon.png";
+import add_yellow from "./add_yellow.png";
 import add_icon_white from "./add_icon_white.png";
 import add_icon_green from "./add_icon_green.png";
 import remove_icon_red from "./remove_icon_red.png";
@@ -56,6 +57,7 @@ import twitter_icon from "./twitter_icon.png";
 import cross_icon from "./cross_icon.png";
 import selector_icon from "./selector_icon.png";
 import rating_starts from "./rating_starts.png";
+import rating_stars_yellow from "./rating_stars_yellow.png";
 import profile_icon from "./profile_icon.png";
 import bag_icon from "./bag_icon.png";
 import logout_icon from "./logout_icon.png";
@@ -68,6 +70,8 @@ export const assets = {
   hero_img,
   search_icon,
   rating_starts,
+  rating_stars_yellow,
+  add_yellow,
   add_icon_green,
   add_icon_white,
   remove_icon_red,

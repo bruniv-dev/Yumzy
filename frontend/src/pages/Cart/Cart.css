@@ -16,7 +16,10 @@
 }
 
 .cart-items-item img {
-  width: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  object-fit: cover;
 }
 
 .cart hr {
@@ -100,6 +103,7 @@
   border: none;
   color: white;
   border-radius: 4px;
+  font-weight: 500;
 }
 
 @media (max-width: 750px) {
