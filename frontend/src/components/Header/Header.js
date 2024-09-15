@@ -10,6 +10,7 @@ const Header = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount } = useContext(StoreContext);
   const navigate = useNavigate();
+  
   return (
     <div className="navbar">
       <Link to="/">

@@ -12,10 +12,9 @@ const Footer = () => {
         <div className="footer-content-left">
           <img className="footer-logo" src={assets.logo_dark} alt="" />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
-            nam voluptatem reprehenderit, temporibus autem dolorum odio eum a
-            deleniti officia quisquam totam necessitatibus assumenda modi
-            eligendi, suscipit exercitationem ratione iste.
+            Discover a diverse menu featuring everything from classic favorites
+            to unique creations. Experience seamless online ordering and fast
+            delivery. Find your new favorite meal with Yumzy today!
           </p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />
