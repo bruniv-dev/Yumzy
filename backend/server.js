@@ -8,7 +8,6 @@ const app = express();
 const port = 5000;
 
 //middleware
-
 //frontend to backend request will be parsed using json
 app.use(express.json());
 //can access backend from any frontend
@@ -18,7 +17,8 @@ app.use(cors());
 connectDB();
 
 //routes -- api endpoint
-app.use("/food", foodRouter);
+app.use("/api/food", foodRouter);
+app.use("/images", express.static("uploads"));
 
 //req data from server
 app.get("/", (req, res) => {
