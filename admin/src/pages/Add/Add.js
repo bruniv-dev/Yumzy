@@ -3,7 +3,6 @@ import "./Add.css";
 import { assets } from "../../assets/assets";
 import axios from "axios";
 import { toast } from "react-toastify";
-
 // import { useEffect } from "react";
 
 const Add = () => {
@@ -38,6 +37,7 @@ const Add = () => {
     formData.append("price", Number(data.price));
     formData.append("category", data.category);
     const response = await axios.post(`${url}/api/food/add`, formData);
+    console.log(response);
     if (response.data.success) {
       setData({
         name: "",
