@@ -16,10 +16,10 @@ export const addFood = async (req, res) => {
 
   try {
     await food.save();
-    res.json({ success: true, message: "Food added" });
+    res.json({ success: true, message: "Food Item added Successfully" });
   } catch (error) {
     console.log(error);
-    res.json({ success: false, message: "Error" });
+    res.json({ success: false, message: "Error adding food item." });
   }
 };
 
@@ -32,7 +32,7 @@ export const foodList = async (req, res) => {
     console.log(error);
     res.json({ success: false, message: "Error" });
   }
-};  
+};
 
 //remove food from list
 export const removeFood = async (req, res) => {
