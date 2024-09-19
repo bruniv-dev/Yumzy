@@ -5,7 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 // import { useEffect } from "react";
 
-const Add = () => {
+const Add = ({ url }) => {
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",
@@ -28,7 +28,6 @@ const Add = () => {
   };
 
   const onSubmitHandler = async (event) => {
-    const url = "http://localhost:5000";
     event.preventDefault();
     const formData = new FormData();
     formData.append("name", data.name);

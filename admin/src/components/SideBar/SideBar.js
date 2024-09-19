@@ -2,7 +2,7 @@ import React from "react";
 import "./SideBar.css";
 import { assets } from "../../assets/assets";
 import { NavLink } from "react-router-dom";
-import { GiCookingPot } from "react-icons/gi";
+// import { GiCookingPot } from "react-icons/gi";
 import { GiCook } from "react-icons/gi";
 import { IoIosListBox } from "react-icons/io";
 
