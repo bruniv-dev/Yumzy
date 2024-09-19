@@ -32,7 +32,7 @@ export const foodList = async (req, res) => {
     console.log(error);
     res.json({ success: false, message: "Error" });
   }
-};
+};  
 
 //remove food from list
 export const removeFood = async (req, res) => {

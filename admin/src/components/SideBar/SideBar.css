@@ -23,13 +23,31 @@
   cursor: pointer;
   padding: 8px 10px;
   border-right: 0;
+  height: 3rem;
 }
 
 .sidebar-option img {
   width: 20px;
 }
 
-@media (max-width: 750px) {
+.sidebar-option .list_icon {
+  fill: var(--primary-color);
+  font-size: 20px;
+}
+
+.sidebar-option .orders_icon {
+  fill: var(--primary-color);
+  font-size: 23px;
+}
+
+.sidebar-option.active,
+.sidebar-option:hover {
+  border: 1px solid var(--primary-color);
+  border-right: none;
+  box-shadow: 0px 0px 1px var(--primary-color);
+}
+
+@media (max-width: 800px) {
   .sidebar-option {
     justify-content: center;
   }

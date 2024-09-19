@@ -6,6 +6,8 @@ import logo from "./logo.png";
 import parcel_icon from "./parcel_icon.png";
 import profile_icon from "./profile_icon.png";
 import list_icon from "./list_icon.png";
+import upload from "./upload.png";
+import upload_grey from "./upload_grey.png";
 
 export const assets = {
   add_icon_white,
@@ -16,4 +18,6 @@ export const assets = {
   parcel_icon,
   profile_icon,
   list_icon,
+  upload,
+  upload_grey,
 };
