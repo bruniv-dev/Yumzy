@@ -3,6 +3,7 @@ import cors from "cors";
 import { connectDB } from "./config/database.js";
 import foodRouter from "./routes/foodRoutes.js";
 import userRouter from "./routes/userRoutes.js";
+import cartRouter from "./routes/cartRoutes.js";
 
 //app config
 const app = express();
@@ -24,6 +25,7 @@ connectDB();
 app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
+app.use("/api/cart", cartRouter);
 
 //req data from server
 app.get("/", (req, res) => {
