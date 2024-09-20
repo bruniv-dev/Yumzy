@@ -8,6 +8,9 @@ import userRouter from "./routes/userRoutes.js";
 const app = express();
 const port = 5000;
 
+import dotenv from "dotenv";
+dotenv.config({ path: ".env" });
+
 //middleware
 //frontend to backend request will be parsed using json
 app.use(express.json());
