@@ -21,6 +21,9 @@ const StoreContextProvider = (props) => {
 
   //foodlist array can be accessed anywhere
 
+  const url = "http://localhost:5000";
+  const [token, setToken] = useState("");
+
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
       setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
@@ -48,6 +51,13 @@ const StoreContextProvider = (props) => {
   //   console.log(cartItems);
   // }, [cartItems]);
 
+  // to avoid logout during reload page, set token on reload
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      setToken(localStorage.getItem("token"));
+    }
+  }, []);
+
   const contextValue = {
     food_list,
     cartItems,
@@ -55,6 +65,9 @@ const StoreContextProvider = (props) => {
     addToCart,
     removeFromCart,
     getTotalCartAmount,
+    url,
+    token,
+    setToken,
   };
 
   return (
