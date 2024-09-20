@@ -11,6 +11,7 @@
 
 .image-div {
   overflow: hidden;
+  height: 200px;
 }
 
 .food-item:hover .food-item-image {
@@ -23,6 +24,7 @@
   width: 100%;
   border-radius: 15px 15px 0px 0px;
   transition: all 0.3s ease-in-out;
+  object-fit: cover;
 }
 
 .food-item-info {
