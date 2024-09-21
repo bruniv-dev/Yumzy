@@ -22,8 +22,8 @@ const orderSchema = new mongoose.Schema({
     default: "Food Processing",
   },
   date: {
-    type: date,
-    default: date.Now(),
+    type: Date,
+    default: Date.now(),
   },
   payment: {
     type: Boolean,
@@ -31,5 +31,6 @@ const orderSchema = new mongoose.Schema({
   },
 });
 
-const orderModel = mongoose.models.order || mongoose.model("order", order);
+const orderModel =
+  mongoose.models.order || mongoose.model("order", orderSchema);
 export default orderModel;
