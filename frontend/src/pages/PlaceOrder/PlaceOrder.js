@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./PlaceOrder.css";
 import { StoreContext } from "../../context/StoreContext";
+import axios from "axios";
 
 const PlaceOrder = () => {
   const { getTotalCartAmount, token, food_list, cartItems, url } =
@@ -34,7 +35,21 @@ const PlaceOrder = () => {
         orderItems.push(itemInfo);
       }
     });
-    console.log(orderItems);
+    // console.log(orderItems);
+    let orderData = {
+      address: data,
+      items: orderItems,
+      amount: getTotalCartAmount() + 2,
+    };
+    let response = await axios.post(`${url}/api/order/place`, orderData, {
+      headers: { token },
+    });
+    if (response.data.success) {
+      const { session_url } = response.data;
+      window.location.replace(session_url);
+    } else {
+      alert("Error");
+    }
   };
 
   useEffect(() => {
