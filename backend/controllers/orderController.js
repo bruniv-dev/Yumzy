@@ -121,3 +121,20 @@ export const placeOrder = async (req, res) => {
     });
   }
 };
+
+export const verifyOrder = async (req, res) => {
+  const { orderId, success } = req.body;
+  try {
+    //while calling api, pass success as string
+    if (success == "true") {
+      await orderModel.findByIdAndUpdate(orderId, { payment: true });
+      res.json({ success: true, message: "Paid Successfully" });
+    } else {
+      await orderModel.findByIdAndDelete(orderId);
+      res.json({ success: false, message: "Payment Failed" });
+    }
+  } catch (error) {
+    res.json({ success: false, message: "Error" });
+    console.log(error);
+  }
+};

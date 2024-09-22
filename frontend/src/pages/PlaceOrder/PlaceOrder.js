@@ -206,7 +206,7 @@ const PlaceOrder = () => {
 
   const placeOrder = async (event) => {
     event.preventDefault();
-
+    const frontendUrl = "http://localhost:3000";
     try {
       // Build order data to send to backend
       let orderItems = [];
@@ -252,7 +252,7 @@ const PlaceOrder = () => {
             );
 
             window.location.replace(
-              `${url}/verify?success=true&orderId=${orderId}`
+              `${frontendUrl}/verify?success=true&orderId=${orderId}`
             );
           },
           prefill: {
@@ -262,6 +262,14 @@ const PlaceOrder = () => {
           },
           theme: {
             color: "#f5c233",
+          },
+          modal: {
+            ondismiss: function () {
+              // Redirect the user to the cancel URL if they cancel the payment
+              window.location.replace(
+                `${frontendUrl}/verify?success=false&orderId=${orderId}`
+              );
+            },
           },
         };
 
