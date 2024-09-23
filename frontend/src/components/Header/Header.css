@@ -123,10 +123,12 @@
 .navbar-profile-dropdown li {
   display: flex;
   align-items: center;
-  padding: 8px;
+  padding: 10px;
   gap: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 500;
+  color: var(--secondary-color);
 }
 
 .navbar-profile-dropdown img {

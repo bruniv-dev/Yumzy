@@ -149,3 +149,14 @@ export const userOrders = async (req, res) => {
     console.log(error);
   }
 };
+
+//list of order for admin
+export const listOrders = async (req, res) => {
+  try {
+    const orders = await orderModel.find({});
+    res.json({ success: true, data: orders });
+  } catch (error) {
+    res.json({ success: false, message: "Error" });
+    console.log(error);
+  }
+};

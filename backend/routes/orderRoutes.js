@@ -1,4 +1,5 @@
 import {
+  listOrders,
   placeOrder,
   userOrders,
   verifyOrder,
@@ -11,3 +12,4 @@ export const orderRouter = express.Router();
 orderRouter.post("/place", authenticateToken, placeOrder);
 orderRouter.post("/verify", verifyOrder);
 orderRouter.post("/userorders", authenticateToken, userOrders);
+orderRouter.get("/list", listOrders);

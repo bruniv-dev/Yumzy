@@ -82,7 +82,13 @@ const Header = ({ setShowLogin }) => {
             <ul className="navbar-profile-dropdown">
               <li>
                 <img src={assets.bag_yellow} alt="" />
-                <p>Orders</p>
+                <p
+                  onClick={() => {
+                    navigate("/myorders");
+                  }}
+                >
+                  Orders
+                </p>
               </li>
               <hr />
               <li>
