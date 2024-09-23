@@ -49,3 +49,15 @@
 .my-orders-order button:hover {
   background-color: var(--primary-color);
 }
+
+@media (max-width: 900px) {
+  .my-orders-order {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 5px;
+    font-size: 12px;
+  }
+
+  .my-orders-order button {
+    font-size: 10px;
+  }
+}

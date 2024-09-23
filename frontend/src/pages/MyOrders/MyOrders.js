@@ -45,7 +45,7 @@ const MyOrders = () => {
                 <span>&#x25cf; </span>
                 <b>{order.status}</b>
               </p>
-              <button>Track Order</button>
+              <button>Track</button>
             </div>
           );
         })}
