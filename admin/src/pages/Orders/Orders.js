@@ -25,7 +25,7 @@ const Orders = ({ url }) => {
       <h3>Orders</h3>
       <div className="order-list">
         {orders.map((order, index) => (
-          <div ley={index} className="order-item">
+          <div key={index} className="order-item">
             <img src={assets.parcel_icon} alt="" />
             <div>
               <p className="order-item-food">
@@ -54,6 +54,13 @@ const Orders = ({ url }) => {
                 <p Name="order-item-phone">{order.address.phone}</p>
               </div>
             </div>
+            <p>Items: {order.items.length}</p>
+            <p>&#8377;{order.amount}</p>
+            <select>
+              <option value="Food Processing">Food Processing</option>
+              <option value="Out For Delivery">Out For Delivery</option>
+              <option value="Delivery">Delivery</option>
+            </select>
           </div>
         ))}
       </div>
