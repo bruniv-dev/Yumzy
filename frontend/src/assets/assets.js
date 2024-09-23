@@ -60,6 +60,7 @@ import rating_starts from "./rating_starts.png";
 import rating_stars_yellow from "./rating_stars_yellow.png";
 import profile_icon from "./profile_icon.png";
 import bag_icon from "./bag_icon.png";
+import bag_yellow from "./bag_yellow.png";
 import logout_icon from "./logout_icon.png";
 import parcel_icon from "./parcel_icon.png";
 
@@ -85,6 +86,7 @@ export const assets = {
   profile_icon,
   logout_icon,
   bag_icon,
+  bag_yellow,
   parcel_icon,
 };
 

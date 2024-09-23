@@ -23,7 +23,10 @@ function App() {
         <Header setShowLogin={setShowLogin} />
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
+          <Route
+            path="/cart"
+            element={<Cart setShowLogin={setShowLogin} />}
+          ></Route>
           <Route path="/order" element={<PlaceOrder />}></Route>
           <Route path="/verify" element={<Verify />}></Route>
           <Route path="/myorders" element={<MyOrders />}></Route>

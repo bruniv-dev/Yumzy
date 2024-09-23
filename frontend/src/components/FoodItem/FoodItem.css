@@ -91,3 +91,26 @@
 .food-item-counter img {
   width: 30px;
 }
+
+.add {
+  font-size: 30px;
+  fill: #fff;
+}
+
+.icon {
+  font-size: 25px;
+  fill: #000;
+  transition: all 0.3s ease;
+}
+
+.add-icon {
+  fill: var(--dark-yellow);
+}
+
+.add-icon:hover {
+  fill: var(--primary-color);
+}
+
+.remove-icon:hover {
+  fill: var(--secondary-color);
+}

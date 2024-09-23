@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import "./FoodItem.css";
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
+import { FaCirclePlus } from "react-icons/fa6";
+import { FaCircleMinus } from "react-icons/fa6";
 
 const FoodItem = ({ id, name, price, description, image }) => {
   // const [itemCount, setItemCount] = useState(0);
@@ -21,24 +23,33 @@ const FoodItem = ({ id, name, price, description, image }) => {
         </div>
 
         {!cartItems[id] ? (
-          <img
-            className="add"
-            src={assets.add_icon_white}
-            alt=""
-            onClick={() => addToCart(id)}
-          />
+          // <img
+          //   className="add"
+          //   src={assets.add_icon_white}
+          //   alt=""
+          //   onClick={() => addToCart(id)}
+          // />
+          <FaCirclePlus className="add" onClick={() => addToCart(id)} />
         ) : (
           <div className="food-item-counter">
-            <img
+            {/* <img
               onClick={() => removeFromCart(id)}
               src={assets.remove_icon_red}
               alt=""
+            /> */}
+            <FaCircleMinus
+              className="remove-icon icon"
+              onClick={() => removeFromCart(id)}
             />
             <p>{cartItems[id]}</p>
-            <img
+            {/* <img
               onClick={() => addToCart(id)}
               src={assets.add_icon_green}
               alt=""
+            /> */}
+            <FaCirclePlus
+              className="add-icon icon"
+              onClick={() => addToCart(id)}
             />
           </div>
         )}

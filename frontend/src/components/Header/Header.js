@@ -3,8 +3,8 @@ import "./Header.css";
 import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
-import { HiOutlineShoppingCart } from "react-icons/hi2";
-import { HiOutlineSearch } from "react-icons/hi";
+import { IoCart } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
 
 const Header = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
@@ -69,7 +69,7 @@ const Header = ({ setShowLogin }) => {
         <div className="navbar-bag-icon">
           <Link to="/cart">
             {/* <img src={assets.basket_icon} alt="" /> */}
-            <HiOutlineShoppingCart />
+            <IoCart className="cart-icon" />
           </Link>
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
@@ -77,10 +77,11 @@ const Header = ({ setShowLogin }) => {
           <button onClick={() => setShowLogin(true)}>Log In</button>
         ) : (
           <div className="navbar-profile">
-            <img src={assets.profile_icon} alt="" />
+            {/* <img src={assets.profile_icon} alt="" /> */}
+            <FaUser className="profile-icon" />
             <ul className="navbar-profile-dropdown">
               <li>
-                <img src={assets.bag_icon} alt="" />
+                <img src={assets.bag_yellow} alt="" />
                 <p>Orders</p>
               </li>
               <hr />
