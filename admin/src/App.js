@@ -8,7 +8,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const url = "http://localhost:5000";
+  // const url = "http://localhost:5000";
+  const url = "https://yumzy.onrender.com";
   return (
     <>
       <ToastContainer />
