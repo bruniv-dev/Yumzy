@@ -8,7 +8,7 @@ import { orderRouter } from "./routes/orderRoutes.js";
 
 //app config
 const app = express();
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 
 import dotenv from "dotenv";
 dotenv.config({ path: ".env" });
