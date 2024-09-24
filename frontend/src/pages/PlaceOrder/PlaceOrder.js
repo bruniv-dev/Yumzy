@@ -207,7 +207,8 @@ const PlaceOrder = () => {
 
   const placeOrder = async (event) => {
     event.preventDefault();
-    const frontendUrl = "http://localhost:3000";
+    // const frontendUrl = "http://localhost:3000";
+    const frontendUrl = "https://yumzy.onrender.com";
     try {
       // Build order data to send to backend
       let orderItems = [];
