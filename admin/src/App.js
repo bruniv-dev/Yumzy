@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   // const url = "http://localhost:5000";
-  const url = "https://yumzy-api.onrender.com";
+  const url = "https://yumzy-3.onrender.com";
   return (
     <>
       <ToastContainer />
